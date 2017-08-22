@@ -1,0 +1,19 @@
+.block-item{
+    
+    width:45%;
+    
+    background-color: #FFFFFF;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 2%;
+    border-radius: 20rpx
+}
+.block-item image{
+    width:200rpx;
+    height:200rpx;
+    padding-top:2%;
+}
+.block-item text{
+   font-size: 35rpx;
+}

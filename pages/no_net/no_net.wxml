@@ -1,0 +1,17 @@
+<!-- pages/no_auth/no_auth.wxml -->
+ <view class="container">  
+<view class="page-head"></view>
+<view class="page-body">
+<image style="height:200rpx;width:200rpx" src="../../img/no_auth/information.png"></image>
+<text style="color:#707070;font-size:16px" class="tc">
+网络连接失败
+</text>
+<text style="color:#8a8a8a;font-size:10px" class="tc">
+请确认联网后重试
+</text>
+</view>
+  
+<!-- <view class="button-area"> -->
+<button class="no_net_button" hover-class="no_net_button-hover" bindtap="reconnect">刷新页面</button>
+<!-- </view> -->
+</view>

@@ -1,0 +1,5 @@
+green£º#339999
+blue£º#1296db
+red£º#e64340
+grey£º#8a8a8a
+orange£º#da7c0c

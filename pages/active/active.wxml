@@ -1,0 +1,29 @@
+<!--pages/active/active.wxml-->
+<import src="../template/ButtonGroup/ButtonGroup.wxml" />
+<import src="../template/ListForm/ListForm.wxml" />
+<!--个人表头-->
+<template is="UserHead" data="{{userInfo}}"></template>
+
+<!--list-->
+<view class="page-body">
+  <!-- <view class="page-section"> -->
+  <text class="tc">激活电子券</text>
+  <!-- </view> -->
+
+
+  <form catchsubmit="activeSubmit">
+    <template is="ListFormInput" data="{{ListForm}}"></template>
+    
+    <view class="btn-area">
+      <button class="weui-button_blue" formType="submit" hover-class="weui-button_blue-hover">激活电子券</button>
+    </view>
+  </form>
+</view>
+
+    <view class="btn-area">
+      <button type="default" style="width:80%;" bindtap="searchRights">查看我的权益</button>
+    </view>
+
+
+<!--悬浮按钮-->
+<template is="ButtonGroup" data="{{CartData}}"></template>

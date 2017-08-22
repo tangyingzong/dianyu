@@ -1,0 +1,21 @@
+
+<import src="../template/ButtonGroup/ButtonGroup.wxml" />
+<import src="../template/LinkList/LinkList.wxml" />
+<!--个人表头-->
+<template is="UserHead" data="{{userInfo}}"></template>
+<view class="page-body">
+<text>我的电子券</text>
+
+<view class="barcode">
+<view class="barnum">{{Voucher_Code}}</view>
+<canvas canvas-id="barcode" />
+</view>
+<view class="qrcode">
+<canvas canvas-id="qrcode" />
+</view>
+
+
+
+</view>
+
+<template is="ButtonGroup"></template> 

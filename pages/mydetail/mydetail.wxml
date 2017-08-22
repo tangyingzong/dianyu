@@ -1,0 +1,28 @@
+<!--pages/mydetail/mydetail.wxml-->
+<!--index.wxml-->
+<import src="../template/ButtonGroup/ButtonGroup.wxml" />
+<import src="../template/ListForm/ListForm.wxml" />
+<!--个人表头-->
+<template is="UserHead" data="{{userInfo}}"></template>
+
+<!--list-->
+<view class="page-body">
+  <!-- <view class="page-section"> -->
+  <text class="tc">我的信息管理</text>
+  <!-- </view> -->
+
+
+  <form catchsubmit="mydetailSubmit">
+    <template is="ListFormInput" data="{{ListForm}}"></template>
+    
+    <view class="btn-area">
+      <button class="weui-button_blue" formType="submit" hover-class="weui-button_blue-hover">修改信息</button>
+    </view>
+  </form>
+</view>
+
+
+
+
+<!--悬浮按钮-->
+<template is="ButtonGroup" data="{{CartData}}"></template>

@@ -1,0 +1,39 @@
+/* pages/myrights/myrights.wxss */
+@import "../template/ButtonGroup/ButtonGroup.wxss";
+@import "../template/LinkList/LinkList.wxss";
+.barcode {
+    display: flex;
+    height: 320rpx;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.barnum {
+    width: 670rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 38rpx;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 10rpx;
+    white-space: nowrap;
+}
+
+.barcode > canvas {
+    width: 680rpx;
+    height: 200rpx;  
+}
+
+.qrcode {
+    height: 420rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.qrcode > canvas {
+    width: 420rpx;
+    height: 420rpx;
+}

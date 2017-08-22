@@ -1,0 +1,3 @@
+/**index.wxss**/
+@import "../template/ButtonGroup/ButtonGroup.wxss";
+@import "../template/LinkList/LinkList.wxss";

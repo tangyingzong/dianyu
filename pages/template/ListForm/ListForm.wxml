@@ -1,0 +1,22 @@
+<template name="ListFormInput">
+<block wx:for="{{ListForm}}" wx:key="{{ListForm.item}}">
+ <view class="page-section" style="width:100%;">
+    <view class="weui-cells">
+      <block wx:for="{{item}}" wx:key="{{item.Label}}" >
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">{{item.label}}</view>
+        </view>
+        <view class="weui-cell__bd weui-cell_primary">
+          <input class="weui-input" value="{{item.value}}" bindinput="{{item.bindinput}}" password='{{item.password}}' disabled="{{item.disabled}}" name="{{item.formname}}" type="{{item.inputtype}}" placeholder="{{item.placeholder}}" confirm-type="{{item.confirmtype}}"/></view>
+        <block wx:if="{{item.button}}">
+        <view class="weui-cell__ft">
+          <button type="default" class="button-mid" bindtap="{{item.buttonbind}}">{{item.button}}</button>
+        </view>
+        </block>
+      </view>
+      </block>
+    </view>
+  </view>
+</block>
+</template>

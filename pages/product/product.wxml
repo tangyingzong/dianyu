@@ -1,0 +1,82 @@
+<import src="../template/ListItem/ListItem.wxml"/>
+<import src="../template/ButtonGroup/ButtonGroup.wxml" />
+
+<!--pages/detail/detail.wxml-->
+<!--图片滚动-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="slide-swiper" >
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item >
+      <view class="slide-item">
+        <image src="{{item}}" class="slide-image" mode="{{wiper_mode}}" bindtap="currentImg" />
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+<!--商品简介-->
+<!-- <view class="detail-head">
+<template is="ItemDetail" data="{{ProductDetail}}">
+</template>
+</view> -->
+  <!--中部tab-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">图文详情</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">参数规格</view>
+
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">产品清单</view>
+
+ <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">售后服务</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style="height:500px;">
+
+  <!-- 图文详情-->
+  <swiper-item>
+  <view>图文详情</view>
+  </swiper-item>
+
+  <!-- 参数规格 -->
+  <swiper-item>
+   <view>参数规格</view>
+  </swiper-item>
+
+  <!-- 产品清单-->
+  <swiper-item>
+    <view>产品清单</view>
+  </swiper-item>
+
+
+  <!-- 售后服务-->
+  <swiper-item>
+    <view>售后服务</view>
+  </swiper-item>
+</swiper>
+<!--悬浮按钮-->
+<template is="ButtonGroup" data="{{CartData}}"></template>
+
+<!-- <view class="foot-button-group">
+<view class="buttongrp-bord">
+  <view class="button-item" style="width:20%" bindtap="btn_home_click">
+  <image src="../../img/home_gray.png"></image>
+  <text>\n回首页</text>
+  </view>
+  
+  <view class="button-item" bindtap="btn_fav_click" style="width:20%">
+  <image wx:if="{{isFavorite == 0}}" src="../../img/favorite_gray.png"></image>
+  <image wx:elif= "{{isFavorite == 1}}" src="../../img/favorite_red.png"></image>
+  <image wx:else src="../../img/favorite_gray.png"></image>
+  <text wx:if="{{isFavorite == 0}}">\n收藏</text>
+  <text  wx:elif= "{{isFavorite == 1}}">\n已收藏</text>
+  <text wx:else>\n收藏</text>
+
+  </view>
+  
+  <view class="button-item" style="width:20%" bindtap="btn_cart_click">
+  <image wx:if="{{CartData.sumQTY>0}}" src="../../img/cart_red.png"></image>
+  <image wx:else src="../../img/cart_gray.png"></image>
+  <text>\n购物车</text><text wx:if="{{CartData.sumQTY>0}}" style="color:#e64340">({{CartData.sumQTY}})</text>
+  </view>
+  <view class="button-item-onlytext" style="width:40%;background-color:#e64340;color:#fff" bindtap="btn_addCart_click">
+  <text>加入购物车</text>
+  </view>
+
+</view>
+</view> -->

@@ -1,0 +1,62 @@
+<!--模板导入-->
+<import src="../template/ListItem/ListItem.wxml" />
+<import src="../template/BlockItem/BlockItem.wxml" />
+
+<!--图片导航-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode="{{wiper_mode}}" bindtap="currentImg" style="width:100%; height:100%;" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--顶部tab-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部应用</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">商户介绍</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31-170}}px;" bindchange="bindChange">
+
+  <!-- 功能 -->
+  <swiper-item>
+    <view class="body">
+      <view class="block-wrap">
+        <block wx:for="{{ItemShow.MainItemList}}" wx:key="{{item.MainItemID}}">
+
+          <!--index默认为下标，item为每项-->
+          <view class="block-item" style="flex-direction:column;">
+            <navigator url="../{{item.MainItemUrl}}/{{item.MainItemUrl}}" open-type="{{item.type}}">
+            <view style="padding:10%">
+              <image style="width:100rpx;height:100rpx" src="{{item.MainItemImage}}" />
+              <text>\n{{item.MainItemName}}</text>
+              <!-- <text style="color:red;">\n￥{{item.ProductMonthlyPrice}}</text> -->
+            </view>
+            </navigator>
+          </view>
+
+        </block>
+
+      </view>
+    </view>
+
+
+
+    <!-- <scroll-view scroll-y="true" style="height:{{winHeight - 31-170}}px;">
+     <template is="BlockItem" data="{{ItemShow}}" >
+    </template> 
+    </scroll-view> -->
+  </swiper-item>
+
+  <!-- 全部 
+  <swiper-item>
+   <scroll-view scroll-y="true" style="height:{{winHeight - 31-170}}px;">
+    <template is="ListItem" data="{{ItemShow}}" >
+    </template>
+   </scroll-view>
+  </swiper-item> -->
+
+  <!-- 店铺介绍-->
+  <swiper-item>
+    <view>店铺介绍</view>
+  </swiper-item>
+</swiper>

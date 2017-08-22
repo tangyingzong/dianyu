@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/customer/customer",
+    "pages/mydetail/mydetail",
+    "pages/login/login",
+    "pages/loginPWD/loginPWD",
+    "pages/myrights/myrights",
+    "pages/active/active",
+    "pages/no_auth/no_auth",
+    "pages/no_net/no_net",
+    "pages/register/register",
+    "pages/campaign/campaign",
+    "pages/product/product",
+    "pages/voucher/voucher"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#e64340",
+    "borderStyle": "gray",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "img/home_gray.png",
+        "selectedIconPath": "img/home_red.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/myrights/myrights",
+        "iconPath": "img/search_gray.png",
+        "selectedIconPath": "img/search_red.png",
+        "text": "我的权益"
+      },
+      
+      {
+        "pagePath": "pages/customer/customer",
+        "iconPath": "img/my_gray.png",
+        "selectedIconPath": "img/my_red.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

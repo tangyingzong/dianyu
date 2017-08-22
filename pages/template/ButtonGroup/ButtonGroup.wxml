@@ -1,0 +1,46 @@
+<!--悬浮按钮-->
+<template name="ButtonGroup">
+<view class="foot-button-group">
+<view class="buttongrp-bord">
+<navigator url="../main/main" open-type="switchTab">
+  <view class="button-item" >
+  <image src="../../img/home_gray.png"></image>
+  <text>回首页</text>
+  </view>
+</navigator>
+<navigator url="../myrights/myrights" open-type="switchTab">
+  <view class="button-item">
+  <image src="../../img/search_gray.png"></image>
+  <text>我的权益</text>
+  </view>
+</navigator>
+<!-- <navigator url="../cart/cart" open-type="switchTab">
+  <view class="button-item"  bindtap="btn_cart_click">
+  <image wx:if="{{CartData.sumQTY>0}}" src="../../img/cart_red.png"></image>
+  <image wx:else src="../../img/cart_gray.png"></image>
+  <text>\n购物车</text><text wx:if="{{CartData.sumQTY>0}}" style="color:#e64340">({{CartData.sumQTY}})</text>
+  </view>
+</navigator> -->
+<navigator url="../customer/customer" open-type="switchTab">
+  <view class="button-item" >
+   <image src="../../img/my_gray.png"></image>
+   <!-- <label>\n我的</label> -->
+   <text>我的</text> 
+  </view>
+</navigator>
+</view>
+</view>
+</template>
+
+<!--个人表头-->
+<template name="UserHead">
+<view class="userinfo">
+    <view class="userinfo-head"> {{userInfo.nickName}}</view>
+    <image class="userinfo-avatar" src="{{userInfo.imgshowUrl}}"></image>
+    <image wx:if="{{userInfo.LoadItem}}" src="{{userInfo.LoadItem}}" bindload="_ImgLoaded" style="width:0;height:0;display:none;"></image>
+
+
+  
+    <!-- <image wx:else class="userinfo-avatar" src="../../../img/usr.jpg"></image> -->
+</view>
+</template>

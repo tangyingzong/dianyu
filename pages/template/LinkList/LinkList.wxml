@@ -1,0 +1,36 @@
+<template name="LinkList">
+<view class="page-section" style="width:100%;">
+  <view class="weui-cells">
+    <block wx:for="{{LinkShow.list}}" wx:key="{{list.page}}" wx:for-item="list">
+      <navigator wx:if="{{LinkShow.parameter}}" url="../{{list.page}}/{{list.page}}?{{LinkShow.parameter}}={{list.id}}" class="weui-cell" open-type="{{list.type}}">
+        <view class="weui-cell__hd">
+            <image src="{{list.imgshowUrl}}" style="width:{{LinkShow.iconsize}};height:{{LinkShow.iconsize}};display:block;margin-right:10rpx"></image> 
+            <image wx:if="{{list.LoadItem}}" src="{{list.LoadItem}}" data-loadid="{{list.id}}" bindload="_ImgListLoaded" style="width:0;height:0;display:none;"></image>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-msg_title" style="margin:0;width:100%;"> {{list.title}} </view>
+            <text class="weui-msg_desc"> {{list.desc}} </text>
+            <!-- <view style="text-align:left;">  -->
+            <block wx:for="{{LinkShow.button}}" wx:for-item="button" wx:key="{{button.label}}">
+            <button type="{{button.type}}" style="background-color:{{button.color}}" class="btn-list" catchtap="{{button.tap}}" data-id="{{list.id}}">{{button.label}}</button>
+            </block>
+             <!-- </view>  -->
+            </view>
+        <view class="weui-cell__ft_in-access">
+        </view>
+      </navigator>
+      <navigator wx:else url="../{{list.page}}/{{list.page}}" class="weui-cell" open-type="{{list.type}}">
+        <view class="weui-cell__hd">
+            <image src="{{list.icon}}" style="width:{{LinkShow.iconsize}};height:{{LinkShow.iconsize}};display:block;margin-right:10rpx"></image>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="weui-label" style="margin:0;width:100%;"> {{list.title}} </view>
+            <view class="weui-msg_desc"> {{list.desc}} </view>
+        </view>
+        <view class="weui-cell__ft_in-access">
+        </view>
+    </navigator>
+    </block>
+  </view>
+</view>
+</template>

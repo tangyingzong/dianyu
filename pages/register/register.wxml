@@ -1,0 +1,28 @@
+<!--pages/register/register.wxml-->
+
+
+<import src="../template/ButtonGroup/ButtonGroup.wxml" />
+<import src="../template/ListForm/ListForm.wxml" />
+<!--个人表头-->
+<template is="UserHead" data="{{userInfo}}"></template>
+
+<!--list-->
+<view class="page-body">
+  <!-- <view class="page-section"> -->
+  <text class="tc">注册并绑定您的手机</text>
+  <!-- </view> -->
+  <form catchsubmit="registerSubmit">
+    <template is="ListFormInput" data="{{ListForm}}"></template>
+    <!-- <template is="ListForm" data="{{ListForm2}}"></template> -->
+    <view class="btn-area">
+      <button class="weui-button_blue" formType="submit" hover-class="weui-button_blue-hover">注册</button>
+    </view>
+  </form>
+</view>
+
+<view class="btn-area">
+      <button type="default" style="width:80%;" bindtap="RedirectLogin">登录已有账户</button>
+    </view>
+
+<!--悬浮按钮-->
+ <template is="ButtonGroup"></template> 

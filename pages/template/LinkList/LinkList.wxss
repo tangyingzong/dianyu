@@ -1,0 +1,22 @@
+@import "../../common/lib/weui.wxss";
+
+.btn-list {
+  display: inline-block;
+  font-size: 25rpx;
+  padding: 0 10rpx;
+  padding-top: 0rpx;
+  margin-right: 30rpx;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.weui-msg_desc {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.weui-msg_title {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 32rpx;
+}

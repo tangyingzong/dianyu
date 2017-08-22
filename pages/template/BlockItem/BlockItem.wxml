@@ -1,0 +1,19 @@
+<template name="BlockItem">
+<view class="body"> 
+    <view class="block-wrap">
+    <block  wx:for="{{ItemShow.productBlock}}" wx:key="{{item.ProductID}}">
+ 
+    <!--index默认为下标，item为每项-->
+    <view class="block-item" style="flex-direction:column;">
+   <navigator url="../detail/detail?ProductId={{item.ProductID}}">
+    <image  src="{{item.ProductImage}}"/>
+    <text >\n{{item.ProductName}}</text>
+    <text style="color:red;">\n￥{{item.ProductMonthlyPrice}}</text>
+    </navigator>
+    </view>
+
+    </block>
+      
+    </view>
+    </view>
+    </template>

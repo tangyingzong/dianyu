@@ -1,0 +1,85 @@
+/*悬浮按钮*/
+.foot-button-group{
+    width: 100%;
+    height:50px;
+    position:fixed;
+    bottom:0;
+}
+.buttongrp-bord{
+ width:100%; 
+ height: 100%;
+ display: flex;
+ flex-direction: row;
+}
+.buttongrp-bord navigator{
+  width: 33.334%
+}
+.button-item{
+height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: #fff;
+border-top: 0.5px #b2b2b2 solid;
+/* border-right: 1px #b2b2b2 solid; */
+list-style-type: none; 
+display: flex;
+}
+.button-item image{
+ width: 25px;
+ height: 25px;
+ margin-top:4px;
+ 
+}
+.button-item text{
+ font-size: 10px;
+ color: #888888;
+ /* font-weight: bold; */
+}
+.button-item-onlytext{
+height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: #fff;
+border-top: 1px #b2b2b2 solid;
+border-right: 1px #b2b2b2 solid;
+line-height:50px;
+}
+/*个人表头*/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom:70rpx;
+}
+.userinfo-head{
+  width: 100%;
+  height: 64rpx;
+  color: #353535;
+  background-color: #ffffff;
+  border-bottom: 2rpx #353535 solid;
+  text-align: center;
+  box-shadow: 0rpx 2rpx 1rpx #353535;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  display: flex;
+  border-radius: 50%; 
+  border: 5rpx #ffffff solid;
+  position: absolute;
+  top:0;
+  margin-left: 5%;
+  background-image: url(../../../img/usr.jpg) no-repeat;
+  background-size:100% 100%; 
+}
+.userinfo-nickname {
+  position: relative;
+  font-size: 30rpx;
+  color: #000;
+}
+.usermotto {
+  margin-top: 200px;
+}

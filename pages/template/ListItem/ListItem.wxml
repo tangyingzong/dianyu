@@ -1,0 +1,85 @@
+  <template name="ListItem">
+   <view class="body">
+    <block wx:for="{{ItemShow.productList}}" wx:key="{{item.ProductID}}">
+    <navigator open-type="redirect" url="../detail/detail?ProductId={{item.ProductID}}">
+    <view class="list-item">
+    <image src="{{item.ProductImage}}" />
+    <view class="list-right">
+    
+    <text class="name">{{item.ProductName}}</text>
+    <text class="detail">{{item.ProductComments}}</text>
+    <view class="price">
+    <text class="currentprice">￥{{item.ProductMonthlyPrice}}  </text>
+    <text class="marketprice">￥1000.00</text>
+    </view>
+    </view>
+    </view>
+    </navigator>
+    </block>
+    </view>
+ </template>
+
+
+
+ <template name="ItemDetail">
+  <view class="list-item2">
+    <!--<image src="{{ProductDetail.ProductImage}}" />-->
+    <view class="list-right">
+    <text class="name">{{ProductDetail.ProductName}}</text>
+    <text class="detail">{{ProductDetail.ProductComments}}</text>
+    <view class="price">
+    <text class="currentprice">￥{{ProductDetail.ProductMonthlyPrice}}  </text>
+    <text class="marketprice">￥1000.00</text>
+    </view>
+    </view>
+    </view>
+ </template>
+
+ <template name="ListItem2">
+    <block wx:for="{{ShowData.ShowDataList}}" wx:key="{{item.ProductID}}">
+    <view class="list-item3" id="{{item.ProductID}}">
+    <navigator class="list-link" url="../detail/detail?ProductId={{item.ProductID}}">
+    <image class="cartimg" src="{{item.ProductImage}}"  />
+    <view class="list-right">
+    <text class="name">{{item.ProductName}}</text>
+    <view class="price">
+    <text class="currentprice">￥{{item.ProductMonthlyPrice}}  </text>
+    <text class="marketprice">￥1000.00</text>
+    </view>
+    </view>
+    </navigator>
+    <view class="QTYcontrol" bindtap="QtyAdd_click" data-addid="{{item.ProductID}}">
+    
+    <image  src="../../img/cart_red.png"></image>
+    </view>
+    <navigator class="list-rightlink" url="../detail/detail?ProductId={{item.ProductID}}">
+    <image src="../../img/right_gray.png"></image>
+    </navigator>
+    </view>
+    </block>
+</template>
+ <!--<template name="ListCart">
+   <view class="body">
+    <view class="page-header"><text class="page-header-text">我的购物车</text></view>
+    <block wx:for="{{CartData.CartList}}">
+    <block wx:if="{{item.QTY>=1}}">
+    <view class="list-item3">
+    <image class="cartimg" src="{{item.ProductImage}}" />
+    <view class="list-right">
+    <text class="name">{{item.ProductName}}</text>
+    <view class="price">
+    <text class="currentprice">￥{{item.ProductMonthlyPrice}}  </text>
+    </view>
+    </view>
+ 
+    <view class="QTYcontrol">
+    <view class="QTYbutton"><text bindtap="bindMinus">-</text></view>
+    <view class="QTYinput"><input type="number" bindchange="bindManual" value="{{item.QTY}}" /></view>
+    <view class="QTYbutton"><text   bindtap="bindPlus">+</text></view>
+    </view>
+
+    </view>
+    </block>
+    </block>
+    </view>
+ </template>-->

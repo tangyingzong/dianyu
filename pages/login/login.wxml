@@ -1,0 +1,32 @@
+<!--pages/myphone/myphone.wxml-->
+
+
+<import src="../template/ButtonGroup/ButtonGroup.wxml" />
+<import src="../template/ListForm/ListForm.wxml" />
+<!--个人表头-->
+<template is="UserHead" data="{{userInfo}}"></template>
+
+<!--list-->
+<view class="page-body">
+  <!-- <view class="page-section"> -->
+  <text class="tc">请用您的手机登录</text>
+  
+  <!-- </view> -->
+  <form catchsubmit="loginSubmit">
+  
+    <template is="ListFormInput" data="{{ListForm}}"></template>
+    <label class="weui-link-bottom" bindtap="RedirectLoginPWD">账号密码登录</label>
+    <view class="btn-area">
+      <button class="weui-button_blue" formType="submit" hover-class="weui-button_blue-hover">登录</button>
+    </view>
+  </form>
+</view>
+
+
+<view class="btn-area">
+  <button type="default" style="width:80%;" bindtap="RedirectRegister">注册新的账户</button>
+  
+</view>
+
+<!--悬浮按钮-->
+ <template is="ButtonGroup"></template> 

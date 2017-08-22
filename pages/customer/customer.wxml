@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<import src="../template/ButtonGroup/ButtonGroup.wxml" />
+<import src="../template/LinkList/LinkList.wxml" />
+<!--个人表头-->
+<template is="UserHead" data="{{userInfo}}"></template>
+<view class="page-body">
+<text wx:if="{{Customer.Customer_Name}}" class="tc">用户 {{Customer.Customer_Name}} 已登录</text>
+<text wx:elif="{{Customer.Phone}}" class="tc">用户 {{Customer.Phone}} 已登录</text>
+<text wx:else class="tc">未登录</text>
+<template is="LinkList" data="{{LinkShow}}"></template>
+</view>

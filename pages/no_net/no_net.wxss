@@ -1,0 +1,11 @@
+/* pages/no_auth/no_auth.wxss */
+.no_net_button
+{
+  background-color:#0061b0;
+  color:#ffffff;
+  width:80%;
+}
+
+.no_net_button-hover{
+  background-color:#023762;
+}

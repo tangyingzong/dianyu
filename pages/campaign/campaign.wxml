@@ -1,0 +1,11 @@
+
+<import src="../template/ButtonGroup/ButtonGroup.wxml" />
+<import src="../template/LinkList/LinkList.wxml" />
+<!--个人表头-->
+<template is="UserHead" data="{{userInfo}}"></template>
+<view class="page-body">
+<text>我的权益明细</text>
+<template is="LinkList" data="{{LinkShow}}"></template>
+</view>
+
+<template is="ButtonGroup"></template> 

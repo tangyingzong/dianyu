@@ -1,0 +1,99 @@
+/* pages/detail/detail.wxss */
+@import "../template/ListItem/ListItem.wxss";
+@import "../template/BlockItem/BlockItem.wxss";
+@import "../template/ButtonGroup/ButtonGroup.wxss";
+
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #b2b2b2;  
+    text-align: center;  
+    line-height: 80rpx;
+    background-color: #fff;
+    }  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 23%;  
+    color: #888888;  
+}  
+.on{ color: #000; 
+    border-bottom: 2rpx solid #000; }  
+  
+.swiper-box{ 
+    display: block; 
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+
+ }  
+.swiper-box view{  
+    text-align: center;  
+}
+.slide-swiper{
+height:450rpx;
+
+}
+.slide-item{
+display: flex;
+text-align: center;
+background-color:#fff;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100%;
+
+}
+.slide-image{
+    display: flex;
+    vertical-align: middle;
+    height: 400rpx;
+    width: 400rpx;
+}
+.detail-head{
+margin: 10px 0;
+background-color: #fff;
+border-top: 1rpx #b2b2b2 solid;
+border-bottom: 1rpx #b2b2b2 solid;
+}
+/* .foot-button-group{
+    width: 100%;
+    height:50px;
+    position:fixed;
+    bottom:0;
+}
+.buttongrp-bord{
+ width:100%; 
+ height: 100%;
+ display: flex;
+ flex-direction: row;
+}
+.button-item{
+height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: #fff;
+border-top: 1px #b2b2b2 solid;
+border-right: 1px #b2b2b2 solid;
+}
+.button-item image{
+ width: 20px;
+ height: 20px;
+ margin:2px 0 0
+}
+.button-item text{
+ font-size: 15px;
+}
+.button-item-onlytext{
+height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: #fff;
+border-top: 1px #b2b2b2 solid;
+border-right: 1px #b2b2b2 solid;
+line-height:50px;
+
+}
+ */

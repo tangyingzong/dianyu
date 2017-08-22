@@ -1,0 +1,17 @@
+<!-- pages/no_auth/no_auth.wxml -->
+ <view class="container">  
+<view class="page-head"></view>
+<view class="page-body">
+<image style="height:200rpx;width:200rpx" src="../../img/no_auth/information.png"></image>
+<text style="color:#707070;font-size:16px" class="tc">
+授权失败
+</text>
+<text style="color:#8a8a8a;font-size:10px" class="tc">
+授权小程序失败\n您将无法使用领取优惠、激活券码等功能
+</text>
+</view>
+  
+<!-- <view class="button-area"> -->
+<button class="no_auth_button" hover-class="no_auth_button-hover" bindtap="get_auth">重新获取授权</button>
+<!-- </view> -->
+</view>
